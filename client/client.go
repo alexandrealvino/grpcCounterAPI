@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	log "github.com/Sirupsen/logrus"
-	"goProjects/grpcAPI/chat"
+	log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
+	"grpcCounterAPI/chat"
 	"strconv"
 	"sync"
 	"time"
