@@ -32,9 +32,9 @@ func main() {
 func CreateClient(i int, outVal *string, wg *sync.WaitGroup, goRoutines int)  {
 	var conn *grpc.ClientConn
 
-	clientCert, _ := tls.LoadX509KeyPair("/home/alexandre/GolandProjects/spire/wl/client-cert.pem","/home/alexandre/GolandProjects/spire/wl/client-key.pem")
+	clientCert, _ := tls.LoadX509KeyPair("/home/alexandre/GolandProjects/spire/wl/client/svid.pem","/home/alexandre/GolandProjects/spire/wl/client/key.pem")
 
-	root, err := ioutil.ReadFile("/home/alexandre/GolandProjects/spire/wl/bundle.pem")
+	root, err := ioutil.ReadFile("/home/alexandre/GolandProjects/spire/wl/client/bundle.pem")
 	if err != nil {
 		fmt.Errorf("Failed to load certificates %v", err)
 	}
